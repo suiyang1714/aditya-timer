@@ -31,3 +31,57 @@
     }
   }
 }
+<<<<<<< HEAD
+=======
+.countDown__time {
+  //color: #66ccff;
+  //letter-spacing: 1rem;
+  //font-size: 1.5rem;
+  //font-family: Lato, sans-serif;
+  //text-transform: uppercase;
+  display: flex;
+}
+.countDown__time .span {
+  opacity: 0;
+  animation: fadeIn 1s alternate infinite;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  50%,
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+.abbr {
+  display: flex;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: Lato, sans-serif;
+  text-decoration: none;
+  text {
+    -webkit-text-decoration: underline white;
+    text-decoration: underline white;
+    transition: all 0.5s ease-in-out;
+  }
+  text.hidden {
+    max-width: 0;
+    text-decoration: none;
+    opacity: 0;
+  }
+  &:hover text {
+    max-width: 2em;
+    text-decoration: none;
+    opacity: 1;
+  }
+  &:hover text.initial {
+    margin-left: 0.5em;
+  }
+}
+>>>>>>> develop

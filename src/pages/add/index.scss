@@ -1,0 +1,33 @@
+.yearBar {
+  width: 200px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: black;
+  padding: 2px;
+  box-sizing: border-box;
+  .bar {
+    height: 16px;
+    border-radius: 16px;
+    background: white;
+  }
+}
+.index {
+  height: 100vh;
+  background: url("https://i.loli.net/2019/11/23/cnKl1Ykd5rZCVwm.jpg") no-repeat center;
+  background-size: cover;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  .main {
+    flex: 1;
+    overflow-y: scroll;
+    padding: 40px;
+    .countDown {
+      margin-bottom: 30px;
+      &__time {
+        margin-top: 30px;
+        font-size: 60px;
+      }
+    }
+  }
+}

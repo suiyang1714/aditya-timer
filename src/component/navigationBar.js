@@ -33,13 +33,12 @@ class Default extends Component {
   }
 
   homeClick () {
-    Taro.switchTab({url: '/pages/index/index'})
-
+    Taro.navigateTo({url: this.props.add})
   }
 
   render() {
     const {navBarHeight, statusBarHeight, titleBarHeight} = this.state
-    const { homePath, backVisible, titleColor, title, navBackgroundColor } = this.props
+    const { add, backVisible, titleColor, title, navBackgroundColor } = this.props
 
     return (
       <View className='navigatorBar'>
@@ -50,24 +49,21 @@ class Default extends Component {
           <View className='navigatorBar__statusBar' style={{height: statusBarHeight + 'px'}} />
 
           <View className='navigatorBar__titleBar' style={{height: titleBarHeight + 'px'}}>
-            {/*<View className='capsule'>*/}
-              {/*{*/}
-                {/*backVisible &&*/}
-                {/*<View className='capsule__item back' onClick={this.backClick.bind()}>*/}
-                  {/*<Image className='capsule__item--img' src={back} />*/}
-                {/*</View>*/}
-              {/*}*/}
-              {/*{*/}
-                {/*(backVisible && homePath) &&*/}
-                {/*<View className='line' />*/}
-              {/*}*/}
-              {/*{*/}
-                {/*homePath &&*/}
-                {/*<View className='capsule__item home' onClick={this.homeClick.bind()}>*/}
+            <View className='capsule'>
+              {
+                backVisible &&
+                <View className='capsule__item back' onClick={this.backClick.bind()}>
+                  <Image className='capsule__item--img' src={back} />
+                </View>
+              }
+              {
+                add &&
+                <View className='capsule__item add' onClick={this.homeClick.bind()}>
                   {/*<Image className='capsule__item--img' src={home} />*/}
-                {/*</View>*/}
-              {/*}*/}
-            {/*</View>*/}
+                  +
+                </View>
+              }
+            </View>
             <View className='title' style={{color: titleColor}}>{title}</View>
           </View>
         </View>
@@ -86,7 +82,7 @@ Default.defaultProps = {
   // 是否显示后退按钮
   backVisible: false,
   // home按钮的路径
-  homePath: ''
+  addPath: ''
 }
 
 export default Default

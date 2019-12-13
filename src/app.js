@@ -26,8 +26,24 @@ class App extends Component {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black'
-    }
+      navigationBarTextStyle: 'black',
+      navigationStyle: 'custom'
+    },
+    // tabBar: {
+    //   color: '#333333',
+    //   selectedColor: '#f00',
+    //   backgroundColor: '#ffffff',
+    //   list: [
+    //     {
+    //       pagePath: 'pages/index/index',
+    //       text: 'process'
+    //     },
+    //     {
+    //       pagePath: 'pages/index/index',
+    //       text: 'process'
+    //     }
+    //   ]
+    // }
   }
 
   componentDidMount () {}
